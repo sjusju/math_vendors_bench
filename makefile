@@ -1,4 +1,3 @@
-TARGETS=aocc_aocl.x icpx_mkl.x
 include toolchains.mk
 include benchmarks.mk
 
