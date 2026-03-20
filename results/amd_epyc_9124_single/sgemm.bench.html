@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<canvas id="c"></canvas>
+<script>
+new Chart(document.getElementById('c'), {
+  type: 'line',
+  data: { datasets: [{label:'aocc_aocl.x.sgemm.bench',data:[{x:64,y:5.37e-06},{x:128,y:3.693e-05},{x:256,y:0.000310903},{x:512,y:0.00233885},{x:1024,y:0.0203919},{x:2048,y:0.161629},{x:4096,y:1.28296},]},{label:'icpx_mkl.x.sgemm.bench',data:[{x:64,y:8.85e-06},{x:128,y:4.415e-05},{x:256,y:0.000336923},{x:512,y:0.00261296},{x:1024,y:0.0209267},{x:2048,y:0.167833},{x:4096,y:1.34065},]},] },
+  options: {
+    scales: {
+      x: { type: 'logarithmic' },
+      y: { type: 'logarithmic' }
+    }
+  }
+});
+</script>
+</body>
+</html>
